@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 
 const Saludo = () => {
-  return <p>Hola Mundo</p>;
+  const nombre = "Mundo";
+  return <p>Hola {nombre}</p>;
 }
 
 function App() {
