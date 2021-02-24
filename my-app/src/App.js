@@ -1,9 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
 
+function SaludarEnIdiomas({idioma}) {
+  if(idioma === "es"){return <span>Hola</span>;}
+  if(idioma === "en"){return <span>Hello</span>;}
+}
+
 const Saludo = () => {
-  const nombre = "Mundo";
-  return <p>Hola {nombre}</p>;
+  const nombreES = "Mundo";
+  const nombreEN = "World";
+  const idioma = "en";
+  return (
+    <div>
+      {
+        idioma === "en" && <p><SaludarEnIdiomas idioma={idioma}/> { `${nombreEN}` } </p>
+      }
+      {
+        idioma === "es" && <p><SaludarEnIdiomas idioma={idioma}/> { `${nombreES}` } </p>
+      }
+    </div>
+  )
 }
 
 function App() {
