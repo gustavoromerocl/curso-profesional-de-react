@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Templates from './curso/Jsx-templates'
-import Test from './curso/Componentes';
+import Templates from './curso/jsx-templates/Jsx-templates'
+import Test from './curso/componentes/Componentes';
 
 function App() {
   return (

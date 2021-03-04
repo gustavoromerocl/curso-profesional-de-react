@@ -1,15 +1,16 @@
 import React from 'react';
 
+
 const Templates = () => {
   function SaludarEnIdiomas({idioma}) {
       if(idioma === "es"){return <span>Hola</span>;}
       if(idioma === "en"){return <span>Hello</span>;}
     }
-    
-  const Saludo = () => {
+  //Se puede asignar le valor por defecto a la propiedad
+  const Saludo = ({idioma = "es"}) => {
     const nombreES = "Mundo";
     const nombreEN = "World";
-    const idioma = "en";
+
     return (
       <div>
         {
@@ -51,7 +52,7 @@ const Templates = () => {
   }
   return (
     <div>
-      <Saludo/>
+      <Saludo idioma="es"/>
       <Nombres/>
     </div>
   );
