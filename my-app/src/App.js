@@ -5,19 +5,19 @@ import './App.css';
 //import ExampleState from './curso/componentes/State'
 //import ExampleLifecycle from './curso/componentes/Ciclo-de-vida-de-un-componente'
 //import {Eventos} from './curso/componentes/Eventos'
-import Formulario from './curso/formularios/leyendo-el-valor-de-los-controles'
+import Surprise from './curso/code-splitting/Surprise'
 import { useState } from 'react';
 
 function App() {
-  const [toggleForm, setToggleForm] = useState(false);
+  const [showSurprise, setShowSurprise] = useState(false);
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <button onClick={() => setToggleForm(!toggleForm)}>ShowForm</button>
+        <button onClick={() => setShowSurprise(!showSurprise)}>Show surprise</button>
         {
-          toggleForm  && <Formulario showed={toggleForm}/> 
+          showSurprise  && <Surprise/> 
         }
           
       </header>
